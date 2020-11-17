@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-// import Box from 'common/src/components/Box';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import Button from 'common/src/components/Button';
-// import Image from 'common/src/components/Image';
-// import Container from 'common/src/components/UI/Container';
 
 import Partner from '../../../assets/saas/partner.png';
 import { Box, Button, Container, Heading, Image, Text } from '../../components';

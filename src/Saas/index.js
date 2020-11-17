@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-// import Sticky from 'react-stickynode';
+import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
 import { saasTheme } from '../theme/saas';
 import { ResetCSS } from '../../styles/reset';
@@ -36,11 +36,11 @@ const Saas = () => (
       <ResetCSS />
       <GlobalStyle />
       <ContentWrapper>
-        {/* <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active"> */}
-        <DrawerProvider>
-          <Navbar />
-        </DrawerProvider>
-        {/* </Sticky> */}
+        <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+          <DrawerProvider>
+            <Navbar />
+          </DrawerProvider>
+        </Sticky>
         <BannerSection />
         <FeatureSection />
         <VisitorSection />

@@ -2,19 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-// import {
-//   Accordion,
-//   AccordionItem,
-//   AccordionTitle,
-//   AccordionBody,
-//   IconWrapper,
-//   OpenIcon,
-//   CloseIcon,
-// } from 'common/src/components/Accordion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-import { Icon } from 'react-icons-kit';
-import { plus } from 'react-icons-kit/entypo/plus';
-import { minus } from 'react-icons-kit/entypo/minus';
 import { Faq } from '../../data/Saas';
 import FaqSectionWrapper from './faqSection.style';
 
@@ -59,10 +49,10 @@ const FaqSection = ({
                       <Heading content={faqItem.title} {...titleStyle} />
                       <IconWrapper>
                         <OpenIcon>
-                          <Icon icon={minus} size={18} />
+                          <FontAwesomeIcon className="fa-2x" icon={faMinus} />
                         </OpenIcon>
                         <CloseIcon>
-                          <Icon icon={plus} size={18} />
+                          <FontAwesomeIcon className="fa-2x" icon={faPlus} />
                         </CloseIcon>
                       </IconWrapper>
                     </>

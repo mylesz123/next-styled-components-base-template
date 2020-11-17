@@ -116,13 +116,5 @@ const PricingButtonWrapper = styled.div`
   }
 `;
 
-export {
-  PricingHead,
-  PricingPrice,
-  PricingButton,
-  PricingList,
-  ListItem,
-  SwitchWrapper,
-  PricingButtonWrapper,
-};
+export { PricingHead, PricingPrice, PricingButton, PricingList, ListItem, SwitchWrapper, PricingButtonWrapper };
 export default PricingTable;

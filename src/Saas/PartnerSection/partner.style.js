@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-import BgImage from 'common/src/assets/image/saas/map.png';
 
 const PartnerSectionWrapper = styled.section`
   padding: 120px 0;
   background-color: #fafbff;
-  background-image: url(${BgImage});
   background-repeat: no-repeat;
   background-position: 25% center;
 

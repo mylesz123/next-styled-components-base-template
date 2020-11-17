@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Icon from 'react-icons-kit';
-// import Box from 'common/src/components/Box';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import Button from 'common/src/components/Button';
-// import Container from 'common/src/components/UI/Container';
-// import GlideCarousel from 'common/src/components/GlideCarousel';
-// import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
-import { checkmark } from 'react-icons-kit/icomoon/checkmark';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { MONTHLY_PRICING_TABLE, YEARLY_PRICING_TABLE } from '../../data/Saas';
 import { Box, Button, Container, GlideCarousel, GlideSlide, Heading, Text } from '../../components';
 
@@ -42,12 +35,12 @@ const PricingSection = ({
     active: true,
   });
 
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setTimeout(function () {
-      setLoading(true);
-    }, 500);
-  });
+  // const [loading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   setTimeout(function () {
+  //     setLoading(true);
+  //   }, 500);
+  // });
 
   const { data } = state;
   const activeStatus = state.active;
@@ -117,7 +110,8 @@ const PricingSection = ({
           <GlideCarousel carouselSelector="pricing-carousel" options={pricingCarouselOptions} controls={false}>
             <>
               {data.map((pricingTable, index) => (
-                <GlideSlide key={`pricing-table-${index}`}>
+                <GlideSlide key={pricingTable.description}>
+                  {/* <GlideSlide key={`pricing-table-${index}`}> */}
                   <PricingTable freePlan={pricingTable.freePlan} className="pricing_table">
                     <PricingHead>
                       <Heading content={pricingTable.name} {...nameStyle} />
@@ -141,7 +135,7 @@ const PricingSection = ({
                     <PricingList>
                       {pricingTable.listItems.map((item, i) => (
                         <ListItem key={`pricing-table-list-${i}`}>
-                          <Icon icon={checkmark} className="price_list_icon" size={13} />
+                          <FontAwesomeIcon icon={faCheck} />
                           <Text content={item.content} {...listContentStyle} />
                         </ListItem>
                       ))}

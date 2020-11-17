@@ -1,15 +1,16 @@
 import React from 'react';
-import { Icon } from 'react-icons-kit';
-import { star } from 'react-icons-kit/fa/star';
-import { starO } from 'react-icons-kit/fa/starO';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Rating = ({ rating }) => {
   const totalRating = [];
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      totalRating.push(<Icon key={`rating-key${i}`} icon={star} className="star" />);
+      totalRating.push(<FontAwesomeIcon key={`rating-key${i}`} className="fa-2x star" icon={faStar} />);
     } else {
-      totalRating.push(<Icon key={`rating-key${i}`} icon={starO} className="star-o" />);
+      totalRating.push(
+        totalRating.push(<FontAwesomeIcon key={`rating-key${i}`} className="fa-2x star-o" icon={faStar} />)
+      );
     }
   }
 

@@ -1,12 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import Button from 'common/src/components/Button';
-// import Image from 'common/src/components/Image';
-// import Container from 'common/src/components/UI/Container';
-// import GlideCarousel from 'common/src/components/GlideCarousel';
-// import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
 import { Testimonial } from '../../data/Saas';
 import { Button, Container, GlideCarousel, GlideSlide, Heading, Image, Text } from '../../components';
 
