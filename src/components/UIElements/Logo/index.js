@@ -2,16 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Text';
 import Link from '../../Link';
+// must use "width" and "height" properties or "layout='fill'" property
 import Image from '../../Image';
 
-const Logo = ({ logoWrapperStyle, logoStyle, titleStyle, withAchor, anchorProps, logoSrc, title, ...props }) => (
+const Logo = ({ logoWrapperStyle, logoStyle, titleStyle, withAnchor, anchorProps, logoSrc, title, ...props }) => (
   <Link {...props} {...logoWrapperStyle}>
-    {withAchor ? (
+    {withAnchor ? (
       <a {...anchorProps}>
-        {logoSrc ? <Image src={logoSrc} alt={title} {...logoStyle} /> : <Text content={title} {...titleStyle} />}
+        {logoSrc ? (
+          <Image src={logoSrc} alt={title} layout="fill" {...logoStyle} />
+        ) : (
+          <Text content={title} {...titleStyle} />
+        )}
       </a>
     ) : (
-      <>{logoSrc ? <Image src={logoSrc} alt={title} {...logoStyle} /> : <Text content={title} {...titleStyle} />}</>
+      <>
+        {logoSrc ? (
+          <Image src={logoSrc} alt={title} layout="fill" {...logoStyle} />
+        ) : (
+          <Text content={title} {...titleStyle} />
+        )}
+      </>
     )}
   </Link>
 );
@@ -22,7 +33,7 @@ Logo.propTypes = {
   logoWrapperStyle: PropTypes.object,
   logoStyle: PropTypes.object,
   titleStyle: PropTypes.object,
-  withAchor: PropTypes.bool,
+  withAnchor: PropTypes.bool,
   anchorProps: PropTypes.object,
 };
 
