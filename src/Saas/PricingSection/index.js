@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import Icon from 'react-icons-kit';
+import { checkmark } from 'react-icons-kit/icomoon/checkmark';
+
 import { MONTHLY_PRICING_TABLE, YEARLY_PRICING_TABLE } from '../../data/Saas';
 import { Box, Button, Container, GlideCarousel, GlideSlide, Heading, Text } from '../../components';
 
@@ -135,7 +136,7 @@ const PricingSection = ({
                     <PricingList>
                       {pricingTable.listItems.map((item, i) => (
                         <ListItem key={`pricing-table-list-${i}`}>
-                          <FontAwesomeIcon icon={faCheck} />
+                          <Icon icon={checkmark} className="price_list_icon" size={13} />
                           <Text content={item.content} {...listContentStyle} />
                         </ListItem>
                       ))}
