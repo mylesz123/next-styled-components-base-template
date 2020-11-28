@@ -9,9 +9,10 @@
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 120
+        "printWidth": 70
       }
     ],
+    "no-nested-ternary": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": 1
   }
