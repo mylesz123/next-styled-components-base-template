@@ -3,21 +3,30 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
-// import Box from 'common/src/components/Box';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import Button from 'common/src/components/Button';
-// import Card from 'common/src/components/Card';
-// import Image from 'common/src/components/Image';
-// import FeatureBlock from 'common/src/components/FeatureBlock';
-// import Container from 'common/src/components/UI/Container';
 import ImageOne from '../../../assets/saas/saasvisitor1.png';
 import ImageBg from '../../../assets/saas/visitor_bg.png';
-import { Box, Button, Card, Container, FeatureBlock, Heading, Image, Text } from '../../components';
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  FeatureBlock,
+  Heading,
+  Image,
+  Text,
+} from '../../components';
 
-import VisitorSectionWrapper, { SectionObject } from './visitor.style';
+import VisitorSectionWrapper, {
+  SectionObject,
+} from './visitor.style';
 
-const VisitorSection = ({ title, description, textArea, imageWrapper, btnStyle }) => (
+const VisitorSection = ({
+  title,
+  description,
+  textArea,
+  imageWrapper,
+  btnStyle,
+}) => (
   <VisitorSectionWrapper id="visitorSection">
     <SectionObject>
       <Card className="objectWrapper" {...imageWrapper}>
@@ -34,10 +43,15 @@ const VisitorSection = ({ title, description, textArea, imageWrapper, btnStyle }
     <Container>
       <Box {...textArea}>
         <FeatureBlock
-          title={<Heading content="Make your website growth with next level visitors" {...title} />}
+          title={
+            <Heading
+              content="Expand your business with custom branding"
+              {...title}
+            />
+          }
           description={
             <Text
-              content="For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!."
+              content="Your brand is your business. Represent it well with a bomb website, clean graphics, and a fresh logo that leaves a lasting impression."
               {...description}
             />
           }
