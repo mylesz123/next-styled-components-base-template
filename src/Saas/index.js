@@ -44,12 +44,12 @@ const Saas = () => (
         <BannerSection />
         <FeatureSection />
         <VisitorSection />
-        <ServiceSection />
-        <PricingSection />
-        <TestimonialSection />
-        <PartnerSection />
+        {/* <ServiceSection /> */}
+        {/* <PricingSection /> */}
+        {/* <TestimonialSection /> */}
+        {/* <PartnerSection /> */}
         <TimelineSection />
-        <FaqSection />
+        {/* <FaqSection /> */}
         <TrialSection />
         <Footer />
       </ContentWrapper>

@@ -112,7 +112,10 @@ export const GlobalStyle = createGlobalStyle`
     color: ${themeGet('colors.white', '#ffffff')} !important;
 
     &.alt {
-      background-color: ${themeGet('colors.primary', '#5268db')} !important;
+      background-color: ${themeGet(
+        'colors.primary',
+        '#5268db'
+      )} !important;
       box-shadow: 0px 9px 20px -5px rgba(82, 104, 219, 0.57) !important;
     }   
   }
@@ -188,7 +191,11 @@ export const ContentWrapper = styled.div`
   }
 
   .trial-section {
-    background: linear-gradient(to bottom, #fafbff 0%, #f7f8fd 100%);
+    background: linear-gradient(
+      to bottom,
+      #fafbff 0%,
+      ${themeGet('colors.lightBB', '#f7f8fd')} 100%
+    );
 
     .button_group {
       text-align: center;
