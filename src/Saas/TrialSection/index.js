@@ -1,45 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Box from 'common/src/components/Box';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import Button from 'common/src/components/Button';
-// import Image from 'common/src/components/Image';
-// import Container from 'common/src/components/UI/Container';
-import VendorLogos from '../../../assets/saas/vendor-logos.png';
-import { Box, Button, Container, Heading, Image, Text } from '../../components';
+import { Fade } from 'react-reveal';
+import Serious from '../../../assets/rc/urban-208.png';
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Image,
+  Text,
+} from '../../components';
 
 import { ButtonGroup } from '../saas.style';
 
+import { Grid, StackLayout } from '../../primitives';
+
 const TrialSection = ({
   sectionWrapper,
-  row,
   title,
   description,
-  textArea,
-  imageArea,
-  ImageOne,
   btnStyle,
-  outlineBtnStyle,
 }) => (
-  <Box {...sectionWrapper}>
+  <Box {...sectionWrapper} id="contact">
     <Container>
-      <Box {...row}>
-        <Box {...imageArea}>
-          <Image {...ImageOne} src={VendorLogos} alt="VendorLogos" />
-        </Box>
-        <Box {...textArea}>
-          <Heading {...title} content="Start your 30 days free trials today!" />
+      <Grid>
+        <Fade left>
+          <Image src={Serious} alt="VisitorDashboard1" />
+          {/* https://icons8.com/illustrations/style--urban */}
+          {/* <p>
+          Illustration by{' '}
+          <a href="https://icons8.com/illustrations/author/5d99891e7dca3d0016cd4e34">
+            Julia
+          </a>{' '}
+          from <a href="https://icons8.com/">Icons8</a>
+        </p> */}
+        </Fade>
+        <StackLayout>
+          <Heading
+            {...title}
+            content="Get serious about your business today."
+          />
           <Text
             {...description}
-            content="We have provided 30 Days Money Back Guarantee in case of dissatisfaction with our product. We care for our customers and their values."
+            content="Lets make some magic together, the Rotten Crayons way ✌🏽"
           />
           <ButtonGroup className="button_group">
-            <Button title="WORK HISTORY" {...btnStyle} />
-            <Button title="Login with Email" variant="textButton" {...outlineBtnStyle} />
+            <Button title="Let's go" {...btnStyle} />
           </ButtonGroup>
-        </Box>
-      </Box>
+        </StackLayout>
+      </Grid>
     </Container>
   </Box>
 );
@@ -67,9 +76,6 @@ TrialSection.defaultProps = {
     flexDirection: 'column',
     alignItems: 'center',
   },
-  textArea: {
-    width: ['100%', '100%', '80%', '43%'],
-  },
   imageArea: {
     width: ['100%', '100%', '43%'],
     mb: ['35px', '35px', '40px', '40px'],
@@ -95,18 +101,6 @@ TrialSection.defaultProps = {
   ImageOne: {
     ml: 'auto',
     mr: 'auto',
-  },
-  btnStyle: {
-    minWidth: '156px',
-    fontSize: '14px',
-    fontWeight: '500',
-    colors: 'primaryWithBg',
-  },
-  outlineBtnStyle: {
-    minWidth: '156px',
-    fontSize: '14px',
-    fontWeight: '500',
-    color: '#0f2137',
   },
 };
 
