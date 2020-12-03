@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { saasTheme } from '../theme/saas';
 import { ResetCSS } from '../../styles/reset';
 import { GlobalStyle, ContentWrapper } from './saas.style';
-
+// https://9elements.com/ inspiration
 import Navbar from './Navbar';
 import BannerSection from './BannerSection';
 import FeatureSection from './FeatureSection';
@@ -19,6 +19,7 @@ import TestimonialSection from './TestimonialSection';
 import PartnerSection from './PartnerSection';
 import { DrawerProvider } from '../contexts/DrawerContext';
 import FaqSection from './FaqSection';
+import Lava from './Lava';
 
 const Saas = () => (
   <ThemeProvider theme={saasTheme}>
@@ -36,6 +37,7 @@ const Saas = () => (
       <ResetCSS />
       <GlobalStyle />
       <ContentWrapper>
+        <Lava />
         <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           <DrawerProvider>
             <Navbar />
