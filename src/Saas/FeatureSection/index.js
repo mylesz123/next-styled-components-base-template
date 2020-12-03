@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Fade } from 'react-reveal';
 import { Features } from '../../data/Saas';
-import { Box, Container, FeatureBlock, Heading, Text } from '../../components';
+import {
+  Box,
+  Container,
+  FeatureBlock,
+  Heading,
+  Text,
+} from '../../components';
 import FeatureSectionWrapper from './featureSection.style';
 
 const FeatureSection = ({
@@ -19,21 +26,33 @@ const FeatureSection = ({
   <FeatureSectionWrapper id="service_section">
     <Container>
       <Box {...sectionHeader}>
-        <Text content="OUR SERVICES" {...sectionSubTitle} />
-        <Heading content="Featured Service that We Provide" {...sectionTitle} />
+        <Text content="EXPERTISE" {...sectionSubTitle} />
+        <Heading content="Featured Services" {...sectionTitle} />
       </Box>
       <Box className="row" {...row}>
         {Features.map((feature, index) => (
           <Box className="col" {...col} key={index}>
-            <FeatureBlock
-              icon={<i className={feature.icon} />}
-              wrapperStyle={blockWrapperStyle}
-              iconStyle={iconStyle}
-              contentStyle={contentStyle}
-              title={<Heading content={feature.title} {...featureTitle} />}
-              description={<Text content={feature.description} {...featureDescription} />}
-              className="saasFeature"
-            />
+            <Fade bottom>
+              <FeatureBlock
+                icon={<i className={feature.icon} />}
+                wrapperStyle={blockWrapperStyle}
+                iconStyle={iconStyle}
+                contentStyle={contentStyle}
+                title={
+                  <Heading
+                    content={feature.title}
+                    {...featureTitle}
+                  />
+                }
+                description={
+                  <Text
+                    content={feature.description}
+                    {...featureDescription}
+                  />
+                }
+                className="saasFeature"
+              />
+            </Fade>
           </Box>
         ))}
       </Box>
