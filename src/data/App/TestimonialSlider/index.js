@@ -2,13 +2,15 @@ const data = {
   testimonials: [
     {
       id: 1,
-      description: 'Best working experience  with this amazing team & in future, we want to work together',
+      description:
+        'Best working experience  with this amazing team & in future, we want to work together',
       name: 'Jon Doe',
       designation: 'Founder of Dumpy',
     },
     {
       id: 2,
-      description: 'Impressed with master class support of the team and really look forward for the future.',
+      description:
+        'Impressed with master class support of the team and really look forward for the future.',
       name: 'Roman Ul Oman',
       designation: 'Co-founder of QatarDiaries',
     },
@@ -23,7 +25,8 @@ const data = {
 
     {
       id: 4,
-      description: 'Really, really well made! Love that each component is handmade and customised. Great Work',
+      description:
+        'Really, really well made! Love that each component is handmade and customised. Great Work',
       name: 'Jeny Doe',
       designation: 'Co-founder of Softo',
     },

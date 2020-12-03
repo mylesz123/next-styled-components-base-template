@@ -5,12 +5,26 @@ import Link from '../../Link';
 // must use "width" and "height" properties or "layout='fill'" property
 import Image from '../../Image';
 
-const Logo = ({ logoWrapperStyle, logoStyle, titleStyle, withAnchor, anchorProps, logoSrc, title, ...props }) => (
+const Logo = ({
+  logoWrapperStyle,
+  logoStyle,
+  titleStyle,
+  withAnchor,
+  anchorProps,
+  logoSrc,
+  title,
+  ...props
+}) => (
   <Link {...props} {...logoWrapperStyle}>
     {withAnchor ? (
       <a {...anchorProps}>
         {logoSrc ? (
-          <Image src={logoSrc} alt={title} layout="fill" {...logoStyle} />
+          <Image
+            src={logoSrc}
+            alt={title}
+            layout="fill"
+            {...logoStyle}
+          />
         ) : (
           <Text content={title} {...titleStyle} />
         )}
@@ -18,7 +32,12 @@ const Logo = ({ logoWrapperStyle, logoStyle, titleStyle, withAnchor, anchorProps
     ) : (
       <>
         {logoSrc ? (
-          <Image src={logoSrc} alt={title} layout="fill" {...logoStyle} />
+          <Image
+            src={logoSrc}
+            alt={title}
+            layout="fill"
+            {...logoStyle}
+          />
         ) : (
           <Text content={title} {...titleStyle} />
         )}

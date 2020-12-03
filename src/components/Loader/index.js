@@ -10,7 +10,13 @@ const Loader = ({ loaderColor, className, ...props }) => {
   if (className) {
     addAllClasses.push(className);
   }
-  return <LoaderStyle className={addAllClasses.join(' ')} loaderColor={loaderColor} {...props} />;
+  return (
+    <LoaderStyle
+      className={addAllClasses.join(' ')}
+      loaderColor={loaderColor}
+      {...props}
+    />
+  );
 };
 
 Loader.propTypes = {

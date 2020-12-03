@@ -47,7 +47,10 @@ const FaqSection = ({
                 <>
                   <AccordionTitle>
                     <>
-                      <Heading content={faqItem.title} {...titleStyle} />
+                      <Heading
+                        content={faqItem.title}
+                        {...titleStyle}
+                      />
                       <IconWrapper>
                         <OpenIcon>
                           <Icon icon={minus} size={18} />
@@ -59,7 +62,10 @@ const FaqSection = ({
                     </>
                   </AccordionTitle>
                   <AccordionBody>
-                    <Text content={faqItem.description} {...descriptionStyle} />
+                    <Text
+                      content={faqItem.description}
+                      {...descriptionStyle}
+                    />
                   </AccordionBody>
                 </>
               </AccordionItem>

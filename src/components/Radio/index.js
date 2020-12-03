@@ -39,12 +39,16 @@ const Radio = ({
   const position = labelPosition || 'right';
 
   // label control
-  const LabelField = labelText && <span className="reusecore__field-label">{labelText}</span>;
+  const LabelField = labelText && (
+    <span className="reusecore__field-label">{labelText}</span>
+  );
 
   return (
     <RadioBoxStyle className={addAllClasses.join(' ')} {...props}>
       <label>
-        {position === 'left' || position === 'right' ? LabelField : ''}
+        {position === 'left' || position === 'right'
+          ? LabelField
+          : ''}
         <input
           type="radio"
           className="radio"

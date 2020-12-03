@@ -50,7 +50,9 @@ export const AccordionTitleWrapper = styled(AccordionItemHeading)`
     flex-grow: 1;
   }
 `;
-export const AccordionItemButtonWrapper = styled(AccordionItemButton)``;
+export const AccordionItemButtonWrapper = styled(
+  AccordionItemButton
+)``;
 export const AccordionBodyWrapper = styled(AccordionItemPanel)`
   animation: 0.35s ${fadeIn} ease-in;
   &.accordion__body--hidden {

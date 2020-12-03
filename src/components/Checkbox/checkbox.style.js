@@ -72,7 +72,8 @@ const CheckBoxStyle = styled.div`
         width: 4px;
         height: 10px;
         transform: rotate(45deg) scale(0.8);
-        border-bottom: 2px solid ${themeGet('colors.white', '#ffffff')};
+        border-bottom: 2px solid
+          ${themeGet('colors.white', '#ffffff')};
         border-right: 2px solid ${themeGet('colors.white', '#ffffff')};
         position: absolute;
         top: 0;

@@ -4,8 +4,19 @@ import Link from 'next/link';
 import Icon from 'react-icons-kit';
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
 
-import { MONTHLY_PRICING_TABLE, YEARLY_PRICING_TABLE } from '../../data/Saas';
-import { Box, Button, Container, GlideCarousel, GlideSlide, Heading, Text } from '../../components';
+import {
+  MONTHLY_PRICING_TABLE,
+  YEARLY_PRICING_TABLE,
+} from '../../data/Saas';
+import {
+  Box,
+  Button,
+  Container,
+  GlideCarousel,
+  GlideSlide,
+  Heading,
+  Text,
+} from '../../components';
 
 import PricingTable, {
   PricingHead,
@@ -98,37 +109,72 @@ const PricingSection = ({
             <Button
               title="Monthly Plan"
               className={activeStatus ? 'active-item' : ''}
-              onClick={() => setState({ data: MONTHLY_PRICING_TABLE, active: true })}
+              onClick={() =>
+                setState({
+                  data: MONTHLY_PRICING_TABLE,
+                  active: true,
+                })
+              }
             />
             <Button
               title="Annual Plan"
               className={activeStatus === false ? 'active-item' : ''}
-              onClick={() => setState({ data: YEARLY_PRICING_TABLE, active: false })}
+              onClick={() =>
+                setState({
+                  data: YEARLY_PRICING_TABLE,
+                  active: false,
+                })
+              }
             />
           </PricingButtonWrapper>
         </Box>
         <Box {...row}>
-          <GlideCarousel carouselSelector="pricing-carousel" options={pricingCarouselOptions} controls={false}>
+          <GlideCarousel
+            carouselSelector="pricing-carousel"
+            options={pricingCarouselOptions}
+            controls={false}
+          >
             <>
               {data.map((pricingTable, index) => (
                 <GlideSlide key={pricingTable.description}>
                   {/* <GlideSlide key={`pricing-table-${index}`}> */}
-                  <PricingTable freePlan={pricingTable.freePlan} className="pricing_table">
+                  <PricingTable
+                    freePlan={pricingTable.freePlan}
+                    className="pricing_table"
+                  >
                     <PricingHead>
-                      <Heading content={pricingTable.name} {...nameStyle} />
-                      <Text content={pricingTable.description} {...descriptionStyle} />
+                      <Heading
+                        content={pricingTable.name}
+                        {...nameStyle}
+                      />
+                      <Text
+                        content={pricingTable.description}
+                        {...descriptionStyle}
+                      />
                     </PricingHead>
                     <PricingPrice>
-                      <Text content={pricingTable.price} {...priceStyle} />
-                      <Text content={pricingTable.priceLabel} {...priceLabelStyle} />
+                      <Text
+                        content={pricingTable.price}
+                        {...priceStyle}
+                      />
+                      <Text
+                        content={pricingTable.priceLabel}
+                        {...priceLabelStyle}
+                      />
                     </PricingPrice>
                     <PricingButton>
                       <Link href={pricingTable.url}>
                         <a>
                           {pricingTable.freePlan ? (
-                            <Button title={pricingTable.buttonLabel} {...buttonStyle} />
+                            <Button
+                              title={pricingTable.buttonLabel}
+                              {...buttonStyle}
+                            />
                           ) : (
-                            <Button title={pricingTable.buttonLabel} {...buttonFillStyle} />
+                            <Button
+                              title={pricingTable.buttonLabel}
+                              {...buttonFillStyle}
+                            />
                           )}
                         </a>
                       </Link>
@@ -136,8 +182,15 @@ const PricingSection = ({
                     <PricingList>
                       {pricingTable.listItems.map((item, i) => (
                         <ListItem key={`pricing-table-list-${i}`}>
-                          <Icon icon={checkmark} className="price_list_icon" size={13} />
-                          <Text content={item.content} {...listContentStyle} />
+                          <Icon
+                            icon={checkmark}
+                            className="price_list_icon"
+                            size={13}
+                          />
+                          <Text
+                            content={item.content}
+                            {...listContentStyle}
+                          />
                         </ListItem>
                       ))}
                     </PricingList>

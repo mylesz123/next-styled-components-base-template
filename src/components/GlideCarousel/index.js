@@ -73,7 +73,7 @@ const GlideCarousel = ({
             data-glide-dir="<"
             aria-label="prev"
           >
-            {prevButton ? prevButton : <DefaultBtn>Prev</DefaultBtn>}
+            {prevButton || <DefaultBtn>Prev</DefaultBtn>}
           </ButtonWrapper>
           <ButtonWrapper
             {...nextWrapper}
@@ -81,7 +81,7 @@ const GlideCarousel = ({
             data-glide-dir=">"
             aria-label="next"
           >
-            {nextButton ? nextButton : <DefaultBtn>Next</DefaultBtn>}
+            {nextButton || <DefaultBtn>Next</DefaultBtn>}
           </ButtonWrapper>
         </ButtonControlWrapper>
       )}
@@ -93,8 +93,8 @@ const GlideCarousel = ({
           data-glide-el="controls[nav]"
           {...bulletWrapperStyle}
         >
-          <Fragment>
-            {totalBullets.map(index => (
+          <>
+            {totalBullets.map((index) => (
               <BulletButton
                 key={index}
                 className="glide__bullet"
@@ -103,7 +103,7 @@ const GlideCarousel = ({
                 {...bulletButtonStyle}
               />
             ))}
-          </Fragment>
+          </>
         </BulletControlWrapper>
       )}
     </GlideWrapper>
@@ -153,10 +153,16 @@ GlideCarousel.propTypes = {
   nextWrapper: PropTypes.object,
 
   /** Set previous button for glide carousel. */
-  prevButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  prevButton: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
 
   /** Set next button for glide carousel. */
-  nextButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  nextButton: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
 
   /** bulletButtonStyle is a bullet button style object prop.
    * It's contain  display, width, height, space,

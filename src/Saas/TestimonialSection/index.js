@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Testimonial } from '../../data/Saas';
-import { Button, Container, GlideCarousel, GlideSlide, Heading, Image, Text } from '../../components';
+import {
+  Button,
+  Container,
+  GlideCarousel,
+  GlideSlide,
+  Heading,
+  Image,
+  Text,
+} from '../../components';
 
 import TestimonialSectionWrapper, {
   TextWrapper,
@@ -33,10 +41,20 @@ const TestimonialSection = ({
           options={glideOptions}
           buttonWrapperStyle={btnWrapperStyle}
           nextButton={
-            <Button icon={<i className="flaticon-next" />} variant="textButton" aria-label="next" {...btnStyle} />
+            <Button
+              icon={<i className="flaticon-next" />}
+              variant="textButton"
+              aria-label="next"
+              {...btnStyle}
+            />
           }
           prevButton={
-            <Button icon={<i className="flaticon-left-arrow" />} variant="textButton" aria-label="prev" {...btnStyle} />
+            <Button
+              icon={<i className="flaticon-left-arrow" />}
+              variant="textButton"
+              aria-label="prev"
+              {...btnStyle}
+            />
           }
         >
           <>
@@ -48,14 +66,24 @@ const TestimonialSection = ({
                     <Text content={item.comment} {...commentStyle} />
                     <ClientName>
                       <Heading content={item.name} {...nameStyle} />
-                      <Heading content={item.designation} {...designationStyle} />
+                      <Heading
+                        content={item.designation}
+                        {...designationStyle}
+                      />
                     </ClientName>
                   </TextWrapper>
                   <ImageWrapper>
                     <RoundWrapper>
-                      <Image src={item.avatar_url} alt="Client Image" />
+                      <Image
+                        src={item.avatar_url}
+                        alt="Client Image"
+                      />
                     </RoundWrapper>
-                    <Button variant="fab" icon={<i className={item.social_icon} />} aria-label="social" />
+                    <Button
+                      variant="fab"
+                      icon={<i className={item.social_icon} />}
+                      aria-label="social"
+                    />
                   </ImageWrapper>
                 </>
               </GlideSlide>

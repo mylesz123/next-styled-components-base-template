@@ -37,14 +37,18 @@ const CheckBox = ({
   }
 
   // label control
-  const LabelField = labelText && <span className="reusecore__field-label">{labelText}</span>;
+  const LabelField = labelText && (
+    <span className="reusecore__field-label">{labelText}</span>
+  );
 
   const position = labelPosition || 'right';
 
   return (
     <CheckBoxStyle className={addAllClasses.join(' ')} {...props}>
       <label htmlFor={htmlFor}>
-        {position === 'left' || position === 'right' ? LabelField : ''}
+        {position === 'left' || position === 'right'
+          ? LabelField
+          : ''}
         <input
           type="checkbox"
           className="checkbox"

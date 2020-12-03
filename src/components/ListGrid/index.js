@@ -74,7 +74,12 @@ const ListGrid = ({
         {data.length ? (
           <>
             {data.map((item, index) => (
-              <Box width={columnWidth} key={index} {...componentContainerStyle} className="singleGridBox">
+              <Box
+                width={columnWidth}
+                key={index}
+                {...componentContainerStyle}
+                className="singleGridBox"
+              >
                 {component(item, index)}
               </Box>
             ))}
@@ -83,7 +88,11 @@ const ListGrid = ({
         {loading && (
           <>
             {limits.map((index) => (
-              <Box width={columnWidth} key={index} {...componentContainerStyle}>
+              <Box
+                width={columnWidth}
+                key={index}
+                {...componentContainerStyle}
+              >
                 {placeholder || <Text content="Loading ..." />}
               </Box>
             ))}
@@ -103,7 +112,9 @@ const ListGrid = ({
           loadMoreWrapperStyle={loadMoreWrapperStyle}
         />
       )}
-      {paginationComponent && <Box {...paginationWrapperStyle}>{paginationComponent}</Box>}
+      {paginationComponent && (
+        <Box {...paginationWrapperStyle}>{paginationComponent}</Box>
+      )}
     </>
   );
 };
@@ -112,7 +123,11 @@ ListGrid.propTypes = {
   data: PropTypes.array.isRequired,
   totalPost: PropTypes.number,
   component: PropTypes.func.isRequired,
-  columnWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  columnWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array,
+  ]),
   pagination: PropTypes.bool,
   paginationComponent: PropTypes.element,
   handleLoadMore: PropTypes.func,

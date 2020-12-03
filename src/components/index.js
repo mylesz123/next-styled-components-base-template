@@ -1,4 +1,12 @@
-export { Accordion, AccordionItem, AccordionTitle, AccordionBody, IconWrapper, OpenIcon, CloseIcon } from './Accordion';
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTitle,
+  AccordionBody,
+  IconWrapper,
+  OpenIcon,
+  CloseIcon,
+} from './Accordion';
 export { default as Alert } from './Alert';
 export { default as BlogPost } from './BlogPost';
 export { default as Box } from './Box';

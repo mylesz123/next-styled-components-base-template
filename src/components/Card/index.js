@@ -30,7 +30,9 @@ const CardWrapper = styled('div')(
   themed('Card')
 );
 
-const Card = ({ children, ...props }) => <CardWrapper {...props}>{children}</CardWrapper>;
+const Card = ({ children, ...props }) => (
+  <CardWrapper {...props}>{children}</CardWrapper>
+);
 
 Card.propTypes = {
   children: PropTypes.any,

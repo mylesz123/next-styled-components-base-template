@@ -11,10 +11,14 @@ export const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
-    window.addEventListener('resize', () => setWindowSize(getWindowSize()));
+    window.addEventListener('resize', () =>
+      setWindowSize(getWindowSize())
+    );
 
     return () => {
-      window.removeEventListener('resize', () => setWindowSize(getWindowSize()));
+      window.removeEventListener('resize', () =>
+        setWindowSize(getWindowSize())
+      );
     };
   }, []);
 

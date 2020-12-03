@@ -7,9 +7,17 @@ const Rating = ({ rating }) => {
   const totalRating = [];
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      totalRating.push(<Icon key={`rating-key${i}`} icon={star} className="star" />);
+      totalRating.push(
+        <Icon key={`rating-key${i}`} icon={star} className="star" />
+      );
     } else {
-      totalRating.push(<Icon key={`rating-key${i}`} icon={starO} className="star-o" />);
+      totalRating.push(
+        <Icon
+          key={`rating-key${i}`}
+          icon={starO}
+          className="star-o"
+        />
+      );
     }
   }
 

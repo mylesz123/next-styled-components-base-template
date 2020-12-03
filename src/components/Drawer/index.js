@@ -23,7 +23,12 @@ const Drawer = ({
 
   return (
     <>
-      <RcDrawer open={open} onClose={toggleHandler} className={addAllClasses.join(' ')} {...props}>
+      <RcDrawer
+        open={open}
+        onClose={toggleHandler}
+        className={addAllClasses.join(' ')}
+        {...props}
+      >
         <div
           className="reusecore-drawer__close"
           onClick={toggleHandler}

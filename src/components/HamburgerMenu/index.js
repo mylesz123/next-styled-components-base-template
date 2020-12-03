@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HamburgMenuWrapper from './hamburgMenu.style';
 
-const HamburgMenu = ({ className, wrapperStyle, barColor, ...props }) => {
+const HamburgMenu = ({
+  className,
+  wrapperStyle,
+  barColor,
+  ...props
+}) => {
   // Add all classs to an array
   const addAllClasses = ['hamburgMenu__bar'];
 

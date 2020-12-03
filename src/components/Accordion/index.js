@@ -12,7 +12,12 @@ import {
   CloseIcon,
 } from './accordion.style';
 
-const Accordion = ({ className, children, allowZeroExpanded = true, preExpanded = [] }) => {
+const Accordion = ({
+  className,
+  children,
+  allowZeroExpanded = true,
+  preExpanded = [],
+}) => {
   // Add all classs to an array
   const addAllClasses = ['reusecore__accordion'];
 
@@ -42,7 +47,10 @@ const AccordionItem = ({ className, children, uuid }) => {
   }
 
   return (
-    <AccordionItemWrapper className={addAllClasses.join(' ')} uuid={uuid}>
+    <AccordionItemWrapper
+      className={addAllClasses.join(' ')}
+      uuid={uuid}
+    >
       {children}
     </AccordionItemWrapper>
   );
@@ -59,7 +67,9 @@ const AccordionTitle = ({ className, children }) => {
 
   return (
     <AccordionTitleWrapper className={addAllClasses.join(' ')}>
-      <AccordionItemButtonWrapper>{children}</AccordionItemButtonWrapper>
+      <AccordionItemButtonWrapper>
+        {children}
+      </AccordionItemButtonWrapper>
     </AccordionTitleWrapper>
   );
 };
@@ -73,7 +83,11 @@ const AccordionBody = ({ className, children }) => {
     addAllClasses.push(className);
   }
 
-  return <AccordionBodyWrapper className={addAllClasses.join(' ')}>{children}</AccordionBodyWrapper>;
+  return (
+    <AccordionBodyWrapper className={addAllClasses.join(' ')}>
+      {children}
+    </AccordionBodyWrapper>
+  );
 };
 
 Accordion.propTypes = {
@@ -108,4 +122,12 @@ AccordionBody.propTypes = {
   children: PropTypes.element,
 };
 
-export { Accordion, AccordionItem, AccordionTitle, AccordionBody, IconWrapper, OpenIcon, CloseIcon };
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTitle,
+  AccordionBody,
+  IconWrapper,
+  OpenIcon,
+  CloseIcon,
+};

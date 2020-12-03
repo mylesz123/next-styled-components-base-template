@@ -6,7 +6,13 @@ import PropTypes from 'prop-types';
 // import FeatureBlock from 'common/src/components/FeatureBlock';
 // import Container from 'common/src/components/UI/Container';
 import { Service } from '../../data/Saas';
-import { Box, Container, FeatureBlock, Heading, Text } from '../../components';
+import {
+  Box,
+  Container,
+  FeatureBlock,
+  Heading,
+  Text,
+} from '../../components';
 
 import ServiceSectionWrapper from './service.style';
 
@@ -26,7 +32,10 @@ const ServiceSection = ({
     <Container>
       <Box {...sectionHeader}>
         <Text content="OUR FEATURES" {...sectionSubTitle} />
-        <Heading content="Why you should choose our Saas" {...sectionTitle} />
+        <Heading
+          content="Why you should choose our Saas"
+          {...sectionTitle}
+        />
       </Box>
       <Box className="row" {...row}>
         {Service.map((feature, index) => (
@@ -36,8 +45,15 @@ const ServiceSection = ({
               wrapperStyle={blockWrapperStyle}
               iconStyle={iconStyle}
               contentStyle={contentStyle}
-              title={<Heading content={feature.title} {...featureTitle} />}
-              description={<Text content={feature.description} {...featureDescription} />}
+              title={
+                <Heading content={feature.title} {...featureTitle} />
+              }
+              description={
+                <Text
+                  content={feature.description}
+                  {...featureDescription}
+                />
+              }
               className="saasService"
             />
           </Box>

@@ -70,14 +70,16 @@ const SwitchStyle = styled.div`
       pointer-events: none;
 
       &:checked + div {
-        width: ${(props) => (props.switchSize ? props.switchSize : '80px')};
+        width: ${(props) =>
+          props.switchSize ? props.switchSize : '80px'};
         background-position: 0 0;
         background-color: ${(props) =>
           props.switchColor ? props.switchColor : '#028489'};
         > div {
           background-color: ${themeGet('colors.white', '#ffffff')};
           left: calc(
-            ${(props) => (props.switchSize ? props.switchSize : '80px')} / 2 +
+            ${(props) =>
+                props.switchSize ? props.switchSize : '80px'} / 2 +
               3px
           );
         }
@@ -85,9 +87,11 @@ const SwitchStyle = styled.div`
     }
     + div {
       vertical-align: middle;
-      width: ${(props) => (props.switchSize ? props.switchSize : '80px')};
+      width: ${(props) =>
+        props.switchSize ? props.switchSize : '80px'};
       height: calc(
-        ${(props) => (props.switchSize ? props.switchSize : '80px')} / 2
+        ${(props) => (props.switchSize ? props.switchSize : '80px')} /
+          2
       );
       border-radius: 450px;
       border-width: 2px;
@@ -103,10 +107,12 @@ const SwitchStyle = styled.div`
       > div {
         float: left;
         width: calc(
-          ${(props) => (props.switchSize ? props.switchSize : '80px')} / 2 - 8px
+          ${(props) => (props.switchSize ? props.switchSize : '80px')} /
+            2 - 8px
         );
         height: calc(
-          ${(props) => (props.switchSize ? props.switchSize : '80px')} / 2 - 8px
+          ${(props) => (props.switchSize ? props.switchSize : '80px')} /
+            2 - 8px
         );
         border-radius: 50%;
         pointer-events: none;
@@ -144,7 +150,8 @@ const SwitchStyle = styled.div`
     input[type='checkbox'] {
       &.switch {
         &:checked + div {
-          width: ${(props) => (props.switchSize ? props.switchSize : '50px')};
+          width: ${(props) =>
+            props.switchSize ? props.switchSize : '50px'};
           background-color: ${(props) =>
             props.switchColor
               ? lightenColor(props.switchColor, 0.2)
@@ -153,17 +160,21 @@ const SwitchStyle = styled.div`
             background-color: ${(props) =>
               props.switchColor ? props.switchColor : '#028489'};
             left: calc(
-              ${(props) => (props.switchSize ? props.switchSize : '50px')} -
-                ${(props) => (props.switchSize ? props.switchSize : '50px')} / 2 +
+              ${(props) =>
+                  props.switchSize ? props.switchSize : '50px'} -
+                ${(props) =>
+                  props.switchSize ? props.switchSize : '50px'} / 2 +
                 1px
             );
           }
         }
       }
       + div {
-        width: ${(props) => (props.switchSize ? props.switchSize : '50px')};
+        width: ${(props) =>
+          props.switchSize ? props.switchSize : '50px'};
         height: calc(
-          ${(props) => (props.switchSize ? props.switchSize : '50px')} / 4
+          ${(props) => (props.switchSize ? props.switchSize : '50px')} /
+            4
         );
         border-width: 0;
         background-color: ${(props) =>
@@ -171,13 +182,16 @@ const SwitchStyle = styled.div`
 
         > div {
           width: calc(
-            ${(props) => (props.switchSize ? props.switchSize : '50px')} / 2
+            ${(props) =>
+                props.switchSize ? props.switchSize : '50px'} / 2
           );
           height: calc(
-            ${(props) => (props.switchSize ? props.switchSize : '50px')} / 2
+            ${(props) =>
+                props.switchSize ? props.switchSize : '50px'} / 2
           );
           top: calc(
-            -${(props) => (props.switchSize ? props.switchSize : '50px')} / 8
+            -${(props) =>
+                props.switchSize ? props.switchSize : '50px'} / 8
           );
           left: 0;
           background-color: ${themeGet('colors.white', '#ffffff')};

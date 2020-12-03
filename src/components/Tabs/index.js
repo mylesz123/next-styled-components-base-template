@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import TabWrapper, { TabMenu, MenuItem, TabContent, TabPanel } from './tabs.style';
+import TabWrapper, {
+  TabMenu,
+  MenuItem,
+  TabContent,
+  TabPanel,
+} from './tabs.style';
 
 const Tab = ({ active, className, children }) => {
   const [state, setState] = useState({
@@ -22,18 +27,26 @@ const Tab = ({ active, className, children }) => {
         {children.map((element, index) => {
           const activeClass = index === state.active ? 'active' : '';
           return (
-            <MenuItem key={index} className={activeClass} onClick={() => handleChange(index)}>
+            <MenuItem
+              key={index}
+              className={activeClass}
+              onClick={() => handleChange(index)}
+            >
               {element.props.title}
             </MenuItem>
           );
         })}
       </TabMenu>
-      <TabContent className="tab_content">{children[state.active]}</TabContent>
+      <TabContent className="tab_content">
+        {children[state.active]}
+      </TabContent>
     </TabWrapper>
   );
 };
 
-export const Panel = ({ children }) => <TabPanel className="tab_panel">{children}</TabPanel>;
+export const Panel = ({ children }) => (
+  <TabPanel className="tab_panel">{children}</TabPanel>
+);
 
 Tab.propTypes = {
   children: PropTypes.array,

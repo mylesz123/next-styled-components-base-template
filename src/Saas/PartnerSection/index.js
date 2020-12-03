@@ -3,11 +3,26 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import Partner from '../../../assets/saas/partner.png';
-import { Box, Button, Container, Heading, Image, Text } from '../../components';
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Image,
+  Text,
+} from '../../components';
 
 import PartnerSectionWrapper from './partner.style';
 
-const PartnerSection = ({ row, col, title, description, button, textArea, imageArea }) => (
+const PartnerSection = ({
+  row,
+  col,
+  title,
+  description,
+  button,
+  textArea,
+  imageArea,
+}) => (
   <PartnerSectionWrapper>
     <Container>
       <Box {...row}>
@@ -15,7 +30,10 @@ const PartnerSection = ({ row, col, title, description, button, textArea, imageA
           <Image src={Partner} alt="Domain Image" />
         </Box>
         <Box {...col} {...textArea}>
-          <Heading {...title} content="Meet our business partner who work behind the scene" />
+          <Heading
+            {...title}
+            content="Meet our business partner who work behind the scene"
+          />
           <Text
             {...description}
             content="You can trust us for any kind of services and some of the world class companies have also trusted us.So have faith and keep in touch with us ."

@@ -38,7 +38,9 @@ const Button = ({
   // Checking button loading state
   const buttonIcon =
     isLoading !== false ? (
-      <>{loader || <Loader loaderColor={loaderColor || '#30C56D'} />}</>
+      <>
+        {loader || <Loader loaderColor={loaderColor || '#30C56D'} />}
+      </>
     ) : (
       icon && <span className="btn-icon">{icon}</span>
     );
@@ -92,7 +94,12 @@ Button.propTypes = {
   iconPosition: PropTypes.oneOf(['left', 'right']),
 
   /** Variant change button shape */
-  variant: PropTypes.oneOf(['textButton', 'outlined', 'fab', 'extendedFab']),
+  variant: PropTypes.oneOf([
+    'textButton',
+    'outlined',
+    'fab',
+    'extendedFab',
+  ]),
 
   /** primary || secondary || warning || error  change text and border color.
    *  And primaryWithBg || secondaryWithBg || warningWithBg || errorWithBg change text, border and background color */
