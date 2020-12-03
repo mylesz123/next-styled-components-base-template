@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import RCLogo from '../../../assets/rc/rc-logo.png';
 import BannerObject1 from '../../../assets/saas/banner/bannerObject1.png';
-import Particles from '../Particle';
 
 import { MENU_ITEMS } from '../../data/Saas';
 
 import BannerWrapper, {
-  CurveIcon,
   DiscountLabel,
   BannerObject,
 } from './bannerSection.style';
 
-import { Curve } from '../../svg/index';
+import { MeltingCurve } from '../../svg/index';
 
 import {
   Box,
@@ -25,6 +24,7 @@ import {
 } from '../../components';
 
 const BannerSection = ({
+  imgStyle,
   row,
   col,
   title,
@@ -35,7 +35,6 @@ const BannerSection = ({
 }) => (
   <>
     <BannerWrapper id="banner_section">
-      <Particles />
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col}>
@@ -46,6 +45,7 @@ const BannerSection = ({
             <FeatureBlock
               title={
                 <Heading
+                  className="gradient-heading"
                   content="Rotten Crayons Creative"
                   {...title}
                 />
@@ -70,11 +70,16 @@ const BannerSection = ({
       </Container>
       <BannerObject>
         <div className="objectWrapper">
+          {/* <Image
+            src={RCLogo}
+            {...imgStyle}
+            alt="Rotten Crayons Creative Logo"
+          /> */}
           <Image src={BannerObject1} alt="BannerObject1" />
         </div>
       </BannerObject>
     </BannerWrapper>
-    <Curve />
+    <MeltingCurve />
   </>
 );
 
@@ -89,17 +94,23 @@ BannerSection.propTypes = {
 };
 
 BannerSection.defaultProps = {
+  imgStyle: {
+    transform: 'rotate(45deg)',
+    opacity: '0.4',
+  },
   title: {
     fontSize: ['22px', '34px', '30px', '55px'],
     fontWeight: '700',
-    color: '#0f2137',
+    // color: '#eb4d4b', //red
+    // color: '#0f2137',
     letterSpacing: '-0.025em',
     mb: ['20px', '25px'],
     lineHeight: '1.5',
   },
   description: {
     fontSize: '16px',
-    color: '#343d48cc',
+    color: '#fff',
+    // color: '#343d48cc',
     lineHeight: '1.75',
     mb: '0',
   },

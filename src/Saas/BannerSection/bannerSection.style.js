@@ -10,7 +10,11 @@ export const CurveIcon = styled.div`
 const BannerWrapper = styled.section`
   padding-top: 210px;
   padding-bottom: 160px;
-  background-color: ${themeGet('colors.lightBorder', '#f1f4f6')};
+  background-color: ${themeGet('colors.black', '#000000')};
+  /* background-color: ${themeGet(
+    'colors.lightBorder',
+    '#f1f4f6'
+  )}; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -19,6 +19,44 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
   }
 
+  /* GRADIENT HEADING */
+  /* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
+  .gradient-heading {
+    /* Fallback: Set a background color. */
+    background-color: black;
+
+    /* Create the gradient. */
+    background-image: linear-gradient( 31deg, #fff 0%, ${themeGet(
+      'colors.primary',
+      '#5268db'
+    )} 36%);
+
+    /* @media only screen and (max-width: 48em) {
+      background-image: linear-gradient( 31deg, ${themeGet(
+        'colors.white',
+        '#ffffff'
+      )} 24%, ${themeGet('colors.black', '#000000')} 36%)
+    }
+     */
+    @media only screen and (max-width: 48em) {
+      background-image: linear-gradient( 31deg, ${themeGet(
+        'colors.white',
+        '#ffffff'
+      )} 0%, ${themeGet('colors.white', '#ffffff')} 100%)
+    }
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
   .drawer-content-wrapper{
     @media (max-width: 767px) {
       width: 300px!important;
@@ -190,12 +228,15 @@ export const ContentWrapper = styled.div`
     }
   }
 
+  //have a gradient that flows white to black going down
+
   .trial-section {
-    background: linear-gradient(
+    background: ${themeGet('colors.black', '#f7f8fd')};
+    /* background: linear-gradient(
       to bottom,
       #fafbff 0%,
       ${themeGet('colors.lightBB', '#f7f8fd')} 100%
-    );
+    ); */
 
     .button_group {
       text-align: center;
