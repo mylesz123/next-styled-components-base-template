@@ -10,7 +10,8 @@ export const Faq = [
   },
   {
     id: 2,
-    title: 'App installation failed, how to update system information?',
+    title:
+      'App installation failed, how to update system information?',
     description:
       'Please read the documentation carefully . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum . ',
   },
@@ -38,22 +39,23 @@ export const Features = [
   {
     id: 1,
     icon: 'flaticon-creative',
-    title: 'Powerful Features',
+    title: 'Web Design',
     description:
-      'Automate time consuming tasks like organising expenses ,tracking your time and following up with clients ',
+      "Clean, responsive, and intuitive. Get the professional and stylish website you've always wanted.",
   },
   {
     id: 2,
     icon: 'flaticon-briefing',
-    title: 'Easy Invoicing',
-    description: 'Want to surprice your clients with professional looking invoices ? Then you are some clicks behind .',
+    title: 'Logos & Branding',
+    description:
+      'Your logo is the first thing people see when they see your brand. First impressions leave a lasting impact.',
   },
   {
     id: 3,
-    icon: 'flaticon-flask',
-    title: 'Easy To Use',
+    icon: 'flaticon-magnifying-glass',
+    title: 'Photography',
     description:
-      'Very Simple and intuitive. So you have to spend less time in paperwork and impress your customer with looks',
+      'Our camera quality, matched with our editing capabilities delivers you bacon crispy photos and graphics.',
   },
 ];
 
@@ -161,52 +163,61 @@ export const Service = [
     id: 1,
     icon: 'flaticon-briefing',
     title: 'App Development',
-    description: 'We are specialized at custom Saas Application Development and special features .',
+    description:
+      'We are specialized at custom Saas Application Development and special features .',
   },
   {
     id: 2,
     icon: 'flaticon-trophy',
     title: '10 Times Award',
-    description: 'We are globally recognised for our services and won a lot of prices around the world .',
+    description:
+      'We are globally recognised for our services and won a lot of prices around the world .',
   },
   {
     id: 3,
     icon: 'flaticon-atom',
     title: 'Cloud Stroage',
-    description: 'LiteSpeed Web Server known for its high performance and low resource consumption.',
+    description:
+      'LiteSpeed Web Server known for its high performance and low resource consumption.',
   },
   {
     id: 4,
     icon: 'flaticon-ruler',
     title: 'Client Satisfaction',
-    description: 'Client Satisfaction is our first priority and We are best at it .Keep In Touch.',
+    description:
+      'Client Satisfaction is our first priority and We are best at it .Keep In Touch.',
   },
   {
     id: 5,
     icon: 'flaticon-creative',
     title: 'UX Planning',
-    description: 'We provide the best UI/UX Design by following the latest trends of the market  .',
+    description:
+      'We provide the best UI/UX Design by following the latest trends of the market  .',
   },
   {
     id: 6,
     icon: 'flaticon-conversation',
     title: 'Customer Support',
-    description: 'A Dedicated support team is always ready to provide best support to our customers.',
+    description:
+      'A Dedicated support team is always ready to provide best support to our customers.',
   },
 ];
 
 export const Timeline = [
   {
-    title: 'Wireframing for project',
-    description: 'We respect our customer opinions and deals with them with perfect wireframing.',
+    title: 'Preparation',
+    description:
+      'We respect your opinion, so we make sure to understand and deliver what you want.',
   },
   {
-    title: 'UI/UX for project',
-    description: 'We provide the best UI/UX Design by following the latest trends of the market .',
+    title: 'Execution',
+    description:
+      'We provide the best UI/UX Design by following the latest trends of the market .',
   },
   {
-    title: 'Negotiation about project',
-    description: 'After the negotiation is done , We start to build the project with latest technology .',
+    title: 'Deliverance',
+    description:
+      'We build the project with latest technology and responsiveness for long term results.',
   },
 ];
 
@@ -238,28 +249,33 @@ export const MENU_ITEMS = [
     offset: '70',
   },
   {
-    label: 'Service',
+    label: 'Services',
     path: '#service_section',
     offset: '70',
   },
+  // {
+  //   label: 'Feature',
+  //   path: '#feature_section',
+  //   offset: '70',
+  // },
+  // {
+  //   label: 'Pricing',
+  //   path: '#pricing_section',
+  //   offset: '70',
+  // },
   {
-    label: 'Feature',
-    path: '#feature_section',
+    label: 'Visitor',
+    path: '#visitorSection',
     offset: '70',
   },
   {
-    label: 'Pricing',
-    path: '#pricing_section',
+    label: 'Timeline',
+    path: '#timeline',
     offset: '70',
   },
   {
-    label: 'Testimonial',
-    path: '#testimonial_section',
-    offset: '70',
-  },
-  {
-    label: 'FAQ',
-    path: '#faq_section',
+    label: 'Contact',
+    path: '#contact',
     offset: '70',
   },
 ];
@@ -268,7 +284,8 @@ export const MONTHLY_PRICING_TABLE = [
   {
     freePlan: true,
     name: 'Basic Account',
-    description: 'For Small teams or group who need to build website ',
+    description:
+      'For Small teams or group who need to build website ',
     price: '$0',
     priceLabel: 'Only for first month',
     buttonLabel: 'CREATE FREE ACCOUNT',
@@ -293,7 +310,8 @@ export const MONTHLY_PRICING_TABLE = [
   },
   {
     name: 'Business Account',
-    description: 'For Mediums teams or group who need to build website ',
+    description:
+      'For Mediums teams or group who need to build website ',
     price: '$9.87',
     priceLabel: 'Per month & subscription yearly',
     buttonLabel: 'START FREE TRIAL',
@@ -318,7 +336,8 @@ export const MONTHLY_PRICING_TABLE = [
   },
   {
     name: 'Premium Account',
-    description: 'For Large teams or group who need to build website ',
+    description:
+      'For Large teams or group who need to build website ',
     price: '$12.98',
     priceLabel: 'Per month & subscription yearly',
     buttonLabel: 'START FREE TRIAL',
@@ -347,7 +366,8 @@ export const YEARLY_PRICING_TABLE = [
   {
     freePlan: true,
     name: 'Basic Account',
-    description: 'For a single client or team who need to build website ',
+    description:
+      'For a single client or team who need to build website ',
     price: '$0',
     priceLabel: 'Only for first month',
     buttonLabel: 'CREATE FREE ACCOUNT',
@@ -372,7 +392,8 @@ export const YEARLY_PRICING_TABLE = [
   },
   {
     name: 'Business Account',
-    description: 'For Small teams or group who need to build website ',
+    description:
+      'For Small teams or group who need to build website ',
     price: '$6.00',
     priceLabel: 'Per month & subscription yearly',
     buttonLabel: 'START FREE TRIAL',
@@ -397,7 +418,8 @@ export const YEARLY_PRICING_TABLE = [
   },
   {
     name: 'Premium Account',
-    description: 'For Large teams or group who need to build website ',
+    description:
+      'For Large teams or group who need to build website ',
     price: '$9.99',
     priceLabel: 'Per month & subscription yearly',
     buttonLabel: 'START FREE TRIAL',
