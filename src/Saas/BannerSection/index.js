@@ -1,45 +1,69 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import BannerObject1 from '../../../assets/saas/banner/bannerObject1.png';
-import BannerObject2 from '../../../assets/saas/banner/bannerObject2.png';
 import Particles from '../Particle';
-import BannerWrapper, { DiscountLabel, BannerObject } from './bannerSection.style';
 
-import { Box, Button, Container, FeatureBlock, Heading, Image, Text } from '../../components';
+import { MENU_ITEMS } from '../../data/Saas';
 
-const BannerSection = ({ row, col, title, btnStyle, description, discountText, discountAmount, outlineBtnStyle }) => {
-  const ButtonGroup = () => (
-    <>
-      <Button title="FREE TRAIL" {...btnStyle} />
-      <Button className="outlined" title="EXPLORE MORE" variant="outlined" {...outlineBtnStyle} />
-    </>
-  );
-  return (
+import BannerWrapper, {
+  CurveIcon,
+  DiscountLabel,
+  BannerObject,
+} from './bannerSection.style';
+
+import { Curve } from '../../svg/index';
+
+import {
+  Box,
+  Button,
+  Container,
+  FeatureBlock,
+  Heading,
+  Image,
+  Text,
+} from '../../components';
+
+const BannerSection = ({
+  row,
+  col,
+  title,
+  btnStyle,
+  description,
+  discountText,
+  discountAmount,
+}) => (
+  <>
     <BannerWrapper id="banner_section">
       <Particles />
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col}>
             <DiscountLabel>
-              <Text content="25% Discount" {...discountAmount} />
-              <Text content="on every first project " {...discountText} />
+              <Text content="20% Discount" {...discountAmount} />
+              <Text content="New Years special!" {...discountText} />
             </DiscountLabel>
             <FeatureBlock
               title={
                 <Heading
-                  content="Ultimate Platform
-                    to monitor your best
-                    workflow."
+                  content="Rotten Crayons Creative"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="We help to create SaaS product that are innovative, differentiated with a superb User Experience, fully accessible through mobile devices. SaaS products are changing the world ."
+                  content="A multidisciplinary design agency. Bringing ideas to life, and meeting clients where they are."
                   {...description}
                 />
               }
-              button={<ButtonGroup />}
+              button={
+                <AnchorLink
+                  href={MENU_ITEMS[1].path}
+                  offset={MENU_ITEMS[1].offset}
+                >
+                  <Button title="Learn More" {...btnStyle} />
+                </AnchorLink>
+              }
             />
           </Box>
         </Box>
@@ -47,14 +71,12 @@ const BannerSection = ({ row, col, title, btnStyle, description, discountText, d
       <BannerObject>
         <div className="objectWrapper">
           <Image src={BannerObject1} alt="BannerObject1" />
-          <div className="dashboardWrapper">
-            <Image src={BannerObject2} alt="BannerObject2" />
-          </div>
         </div>
       </BannerObject>
     </BannerWrapper>
-  );
-};
+    <Curve />
+  </>
+);
 
 BannerSection.propTypes = {
   title: PropTypes.object,
@@ -67,18 +89,6 @@ BannerSection.propTypes = {
 };
 
 BannerSection.defaultProps = {
-  row: {
-    flexBox: true,
-    flexWrap: 'wrap',
-    ml: '-15px',
-    mr: '-15px',
-    alignItems: 'center',
-  },
-  col: {
-    pr: '15px',
-    pl: '15px',
-    width: [1, '70%', '50%', '45%'],
-  },
   title: {
     fontSize: ['22px', '34px', '30px', '55px'],
     fontWeight: '700',

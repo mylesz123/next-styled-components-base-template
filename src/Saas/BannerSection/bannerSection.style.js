@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
-import BannerBG from '../../../assets/saas/saas-banner.jpg';
+
+export const CurveIcon = styled.div`
+  svg {
+    fill: ${themeGet('colors.lightBorder', '#f1f4f6')};
+  }
+`;
 
 const BannerWrapper = styled.section`
   padding-top: 210px;
   padding-bottom: 160px;
-  background-image: url(${BannerBG});
+  background-color: ${themeGet('colors.lightBorder', '#f1f4f6')};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,23 +29,9 @@ const BannerWrapper = styled.section`
     min-height: auto;
   }
 
-  @media only screen and (max-width: 480px) {
-    background: none;
-  }
-
   .particle {
     position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 0;
     overflow: hidden;
-    @media (max-width: 767px) {
-      display: none;
-    }
-    @media only screen and (max-width: 480px) {
-      width: 100%;
-    }
   }
 
   .row {
@@ -62,6 +53,7 @@ const BannerWrapper = styled.section`
 `;
 
 const BannerObject = styled.div`
+  /* position: fixed; */
   position: absolute;
   width: 50%;
   height: 100%;
@@ -70,10 +62,11 @@ const BannerObject = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: 767px) {
-    display: none;
+    width: 75%;
   }
   .objectWrapper {
     margin-left: auto;
+    /* position: absolute; */
     position: relative;
     .dashboardWrapper {
       position: absolute;
