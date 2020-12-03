@@ -1,6 +1,22 @@
 import styled from 'styled-components';
 
-export const TimelineWrapper = styled.div``;
+export const TimelineWrapper = styled.section`
+  padding: 60px 0;
+  @media only screen and (max-width: 990px) {
+    padding: 80px 0;
+  }
+
+  .grid {
+    @media only screen and (max-width: 42em) {
+      .content {
+        grid-row: 2;
+      }
+      .imageSection {
+        grid-row: 1;
+      }
+    }
+  }
+`;
 
 export const TimelineDot = styled.div`
   width: 20px;
@@ -36,7 +52,7 @@ export const TimelineDot = styled.div`
   }
 `;
 
-export const TimelineItem = styled.div`
+export const TimelineItem = styled.section`
   position: relative;
   display: flex;
   align-items: center;

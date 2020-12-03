@@ -1,87 +1,96 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
-// import Box from 'common/src/components/Box';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import Button from 'common/src/components/Button';
-// import Image from 'common/src/components/Image';
-// import Container from 'common/src/components/UI/Container';
+import { Fade, Slide } from 'react-reveal';
 
 import { Timeline } from '../../data/Saas';
-import Illustration from '../../../assets/saas/illustration.png';
-import { Box, Button, Container, Heading, Image, Text } from '../../components';
+import {
+  Box,
+  Container,
+  Heading,
+  Image,
+  Text,
+} from '../../components';
 
-import { TimelineWrapper, TimelineItem, TimelineIndex, TimelineContent, TimelineDot, Hidden } from './timeline.style';
+import {
+  TimelineWrapper,
+  TimelineItem,
+  TimelineContent,
+  TimelineDot,
+  Hidden,
+} from './timeline.style';
+
+import { Grid } from '../../primitives';
+import Creativity from '../../../assets/saas/illustration.png';
 
 const TimelineSection = ({
-  sectionWrapper,
   sectionHeader,
   sectionTitle,
   sectionSubTitle,
-  row,
-  col,
-  button,
-  textArea,
-  imageArea,
-  imageTwo,
-  buttonWrapper,
   indexStyle,
   timelineTitle,
   timelineDescription,
 }) => (
-  <Box {...sectionWrapper}>
+  <TimelineWrapper id="timeline">
     <Container>
       <Box {...sectionHeader}>
-        <Text {...sectionSubTitle} content="WORKING STEP" />
-        <Heading {...sectionTitle} content="How Pestro work behind the scenes" />
+        <Text {...sectionSubTitle} content="Creative Process" />
+        <Heading
+          {...sectionTitle}
+          content="How Rotten Crayons works behind the scenes"
+        />
       </Box>
-      <Box {...row}>
-        <Box {...col} {...imageArea}>
+      <Grid className="grid">
+        <aside className="content">
+          {Timeline.map((item, index) => (
+            <TimelineItem key={`timeline-item-${index}`}>
+              <div>
+                <Hidden>
+                  <Slide bottom>
+                    <Text
+                      as="span"
+                      content={item.index || `0${index + 1}`}
+                      {...indexStyle}
+                    />
+                  </Slide>
+                </Hidden>
+              </div>
+              <TimelineContent>
+                <Hidden>
+                  <Slide bottom delay={100}>
+                    <Heading
+                      as="h2"
+                      content={item.title}
+                      {...timelineTitle}
+                    />
+                  </Slide>
+                </Hidden>
+                <Hidden>
+                  <Slide bottom delay={200}>
+                    <Text
+                      content={item.description}
+                      {...timelineDescription}
+                    />
+                  </Slide>
+                </Hidden>
+              </TimelineContent>
+              <TimelineDot />
+            </TimelineItem>
+          ))}
+        </aside>
+        <aside className="imageSection">
           <Fade bottom>
-            <Image {...imageTwo} src={Illustration} alt="Illustration" />
+            <Image src={Creativity} alt="Creativity" />
+            {/* TODO: mention this in the footer with special thanks to author */}
+            {/* <ImageCredit>
+              <a href="https://stories.freepik.com/idea">
+                Illustration by Freepik Stories
+              </a>
+            </ImageCredit> */}
           </Fade>
-        </Box>
-        <Box {...col} {...textArea}>
-          <TimelineWrapper>
-            {Timeline.map((item, index) => (
-              <TimelineItem key={`timeline-item-${index}`}>
-                <TimelineIndex>
-                  <Hidden>
-                    <Slide bottom>
-                      <Text as="span" content={item.index || `0${index + 1}`} {...indexStyle} />
-                    </Slide>
-                  </Hidden>
-                </TimelineIndex>
-                <TimelineContent>
-                  <Hidden>
-                    <Slide bottom delay={100}>
-                      <Heading as="h2" content={item.title} {...timelineTitle} />
-                    </Slide>
-                  </Hidden>
-                  <Hidden>
-                    <Slide bottom delay={200}>
-                      <Text content={item.description} {...timelineDescription} />
-                    </Slide>
-                  </Hidden>
-                </TimelineContent>
-                <TimelineDot />
-              </TimelineItem>
-            ))}
-          </TimelineWrapper>
-        </Box>
-      </Box>
-      <Box {...buttonWrapper}>
-        <Link href="#">
-          <a>
-            <Button {...button} title="HIRE FOR PROJECT" />
-          </a>
-        </Link>
-      </Box>
+        </aside>
+      </Grid>
     </Container>
-  </Box>
+  </TimelineWrapper>
 );
 
 TimelineSection.propTypes = {
