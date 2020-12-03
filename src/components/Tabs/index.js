@@ -55,7 +55,7 @@ Tab.propTypes = {
 
 Panel.propTypes = {
   children: PropTypes.element,
-  title: PropTypes.element.isRequired,
+  // title: PropTypes.element.isRequired,
 };
 
 export default Tab;

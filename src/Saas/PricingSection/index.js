@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Icon from 'react-icons-kit';
@@ -30,7 +30,7 @@ import PricingTable, {
 const PricingSection = ({
   sectionWrapper,
   row,
-  col,
+  // col,
   secTitleWrapper,
   secHeading,
   secText,
@@ -46,13 +46,6 @@ const PricingSection = ({
     data: MONTHLY_PRICING_TABLE,
     active: true,
   });
-
-  // const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setTimeout(function () {
-  //     setLoading(true);
-  //   }, 500);
-  // });
 
   const { data } = state;
   const activeStatus = state.active;
@@ -207,6 +200,8 @@ const PricingSection = ({
 
 PricingSection.propTypes = {
   sectionWrapper: PropTypes.object,
+  buttonStyle: PropTypes.object,
+  buttonFillStyle: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
   secTitleWrapper: PropTypes.object,

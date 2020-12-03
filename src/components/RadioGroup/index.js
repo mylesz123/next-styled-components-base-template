@@ -55,9 +55,9 @@ RadioGroup.propTypes = {
   /** className of the RadioGroup. */
   className: PropTypes.string,
   /** title or value of the RadioGroup. */
-  title: PropTypes.string,
+  // title: PropTypes.string,
   /** text or sub title for single radio component / element. */
-  text: PropTypes.string,
+  // text: PropTypes.string,
   /** active item value of the RadioGroup. The prop should be a string but in camelCase. */
   value: PropTypes.string,
   /** RadioGroup data in array of object form. Each object item should has 3 properties id, title and text. */

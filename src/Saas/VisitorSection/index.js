@@ -72,6 +72,8 @@ VisitorSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
+  textArea: PropTypes.object,
+  imageWrapper: PropTypes.object,
 };
 
 VisitorSection.defaultProps = {

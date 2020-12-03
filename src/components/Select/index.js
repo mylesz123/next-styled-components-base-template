@@ -56,6 +56,7 @@ Select.propTypes = {
 
   /** Set label position of the select field. By default it's top */
   labelPosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+  as: PropTypes.string,
 };
 
 Select.defaultProps = {

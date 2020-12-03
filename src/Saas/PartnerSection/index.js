@@ -59,6 +59,7 @@ PartnerSection.propTypes = {
   button: PropTypes.object,
   textArea: PropTypes.object,
   imageArea: PropTypes.object,
+  imageAreaRow: PropTypes.object,
 };
 
 PartnerSection.defaultProps = {

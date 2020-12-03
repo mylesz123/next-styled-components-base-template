@@ -45,7 +45,7 @@ const Radio = ({
 
   return (
     <RadioBoxStyle className={addAllClasses.join(' ')} {...props}>
-      <label>
+      <label htmlFor={labelText}>
         {position === 'left' || position === 'right'
           ? LabelField
           : ''}

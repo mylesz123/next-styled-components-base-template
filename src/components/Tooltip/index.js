@@ -88,6 +88,7 @@ Tooltip.propTypes = {
 
   /** Set tooltip position left || right || top || bottom. */
   position: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
+  isChecked: PropTypes.bool,
 };
 
 /** Tooltip default proptype */

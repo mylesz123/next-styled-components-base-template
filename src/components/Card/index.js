@@ -40,6 +40,7 @@ Card.propTypes = {
   ...borderColor.propTypes,
   ...borderRadius.propTypes,
   ...boxShadow.propTypes,
+  boxShadow: boxShadow.propTypes,
   ...backgroundImage.propTypes,
   ...backgroundSize.propTypes,
   ...backgroundPosition.propTypes,

@@ -71,6 +71,8 @@ Drawer.propTypes = {
   /** drawerHandler could be button, icon, string or any component */
   // drawerHandler: PropTypes.element.isRequired
   drawerHandler: PropTypes.element,
+  handler: PropTypes.bool,
+  level: PropTypes.any,
 };
 
 Drawer.defaultProps = {

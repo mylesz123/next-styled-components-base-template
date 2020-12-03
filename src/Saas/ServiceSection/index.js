@@ -1,10 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Box from 'common/src/components/Box';
-// import Text from 'common/src/components/Text';
-// import Heading from 'common/src/components/Heading';
-// import FeatureBlock from 'common/src/components/FeatureBlock';
-// import Container from 'common/src/components/UI/Container';
 import { Service } from '../../data/Saas';
 import {
   Box,
@@ -72,6 +67,9 @@ ServiceSection.propTypes = {
   sectionSubTitle: PropTypes.object,
   featureTitle: PropTypes.object,
   featureDescription: PropTypes.object,
+  iconStyle: PropTypes.object,
+  contentStyle: PropTypes.object,
+  blockWrapperStyle: PropTypes.object,
 };
 
 // ServiceSection default style

@@ -108,6 +108,10 @@ TimelineSection.propTypes = {
   indexStyle: PropTypes.object,
   timelineTitle: PropTypes.object,
   timelineDescription: PropTypes.object,
+  imageAreaRow: PropTypes.object,
+  title: PropTypes.object,
+  description: PropTypes.object,
+  imageOne: PropTypes.object,
 };
 
 TimelineSection.defaultProps = {

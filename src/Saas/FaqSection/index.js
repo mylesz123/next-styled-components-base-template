@@ -86,11 +86,13 @@ const FaqSection = ({
 
 // FaqSection style props
 FaqSection.propTypes = {
+  descriptionStyle: PropTypes.object,
   sectionHeader: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
   sectionTitle: PropTypes.object,
   sectionSubTitle: PropTypes.object,
+  titleStyle: PropTypes.object,
   buttonWrapper: PropTypes.object,
   button: PropTypes.object,
 };

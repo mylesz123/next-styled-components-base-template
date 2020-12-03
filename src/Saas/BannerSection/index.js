@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import RCLogo from '../../../assets/rc/rc-logo.png';
 import BannerObject1 from '../../../assets/saas/banner/bannerObject1.png';
 
 import { MENU_ITEMS } from '../../data/Saas';
@@ -24,7 +23,7 @@ import {
 } from '../../components';
 
 const BannerSection = ({
-  imgStyle,
+  // imgStyle,
   row,
   col,
   title,
@@ -88,6 +87,7 @@ BannerSection.propTypes = {
   btnStyle: PropTypes.object,
   description: PropTypes.object,
   contentStyle: PropTypes.object,
+  imgStyle: PropTypes.object,
   discountText: PropTypes.object,
   discountAmount: PropTypes.object,
   outlineBtnStyle: PropTypes.object,

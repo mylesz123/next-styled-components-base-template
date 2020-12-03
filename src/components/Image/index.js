@@ -23,6 +23,7 @@ Image.propTypes = {
   className: PropTypes.string,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  m: PropTypes.number,
 };
 
 Image.defaultProps = {

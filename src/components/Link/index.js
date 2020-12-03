@@ -18,6 +18,8 @@ export default Link;
 Link.propTypes = {
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   children: PropTypes.any.isRequired,
+  m: PropTypes.number,
+  display: PropTypes.string,
   ...base.propTypes,
 };
 

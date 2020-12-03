@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-shadow */
 const pad = (num, totalChars) => {
   const pad = '0';
   num += '';
@@ -42,11 +44,11 @@ const changeColor = (color, ratio, darker) => {
     : color
         .replace(
           /^#?([a-f0-9][a-f0-9])([a-f0-9][a-f0-9])([a-f0-9][a-f0-9])/i,
-          function () {
-            return `${parseInt(arguments[1], 16)},${parseInt(
-              arguments[2],
+          function (args) {
+            return `${parseInt(...args[1], 16)},${parseInt(
+              ...args[2],
               16
-            )},${parseInt(arguments[3], 16)}`;
+            )},${parseInt(...args[3], 16)}`;
           }
         )
         .split(/,/);
