@@ -14,7 +14,9 @@ const colors = {
   secondaryHover: '#FF282F', // 11
   yellow: '#fdb32a', // 12
   yellowHover: '#F29E02', // 13
-  primaryBoxShadow: ' 0px 9px 19.74px 1.26px rgba(82, 104, 219, 0.57) ',
+  lightBG: '#f7f8fd',
+  primaryBoxShadow:
+    ' 0px 9px 19.74px 1.26px rgba(82, 104, 219, 0.57) ',
 };
 
 export default colors;

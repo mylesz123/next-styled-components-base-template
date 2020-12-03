@@ -2,7 +2,26 @@ import colors from './colors';
 
 export const saasTheme = {
   breakpoints: ['575px', '768px', '990px', '1440px'],
-  space: [0, 5, 8, 10, 15, 20, 25, 30, 33, 35, 40, 50, 60, 70, 80, 85, 90, 100],
+  space: [
+    0,
+    5,
+    8,
+    10,
+    15,
+    20,
+    25,
+    30,
+    33,
+    35,
+    40,
+    50,
+    60,
+    70,
+    80,
+    85,
+    90,
+    100,
+  ],
   fontSizes: [10, 12, 14, 15, 16, 18, 20, 22, 24, 36, 48, 80, 96],
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   lineHeights: {
@@ -16,7 +35,15 @@ export const saasTheme = {
     tight: '-0.05em',
     mega: '0.25em',
   },
-  borders: [0, '1px solid', '2px solid', '3px solid', '4px solid', '5px solid', '6px solid'],
+  borders: [
+    0,
+    '1px solid',
+    '2px solid',
+    '3px solid',
+    '4px solid',
+    '5px solid',
+    '6px solid',
+  ],
   radius: [3, 4, 5, 10, 20, 30, 60, 120, '50%'],
   widths: [36, 40, 44, 48, 54, 70, 81, 128, 256],
   heights: [36, 40, 44, 46, 48, 54, 70, 81, 128],
@@ -33,7 +60,8 @@ export const saasTheme = {
         backgroundColor: colors.primaryHover,
         borderColor: colors.transparent,
         boxShadow: '0px 9px 20px -5px rgba(82, 104, 219, 0.57)',
-        backgroundImage: 'linear-gradient( 31deg, rgba(215,178,233, 0.4) 0%, rgba(83,105,220, 0.4) 100%)',
+        backgroundImage:
+          'linear-gradient( 31deg, rgba(215,178,233, 0.4) 0%, rgba(83,105,220, 0.4) 100%)',
       },
     },
     secondary: {
@@ -64,7 +92,8 @@ export const saasTheme = {
       color: colors.white,
       backgroundColor: colors.primary,
       borderColor: colors.primary,
-      backgroundImage: 'linear-gradient( 31deg, rgba(215,178,233, 0.4) 0%, rgba(83,105,220, 0.4) 100%)',
+      backgroundImage:
+        'linear-gradient( 31deg, rgba(215,178,233, 0.4) 0%, rgba(83,105,220, 0.4) 100%)',
       '&:hover': {
         backgroundColor: colors.primaryHover,
         borderColor: colors.primaryHover,
