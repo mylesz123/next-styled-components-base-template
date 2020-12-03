@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-// import Navbar as NavbarWrapper from 'common/src/components/Navbar';
-// import Drawer from 'common/src/components/Drawer';
-// import Logo from 'common/src/components/UIElements/Logo';
-// import Box from 'common/src/components/Box';
-// import HamburgMenu from 'common/src/components/HamburgMenu';
-// import Container from 'common/src/components/UI/Container';
 import { DrawerContext } from '../../contexts/DrawerContext';
 
 import { MENU_ITEMS } from '../../data/Saas';
 import ScrollSpyMenu from '../../components/ScrollSpyMenu';
 
-import LogoImage from '../../../assets/saas/logo.png';
-import { Box, Container, Drawer, HamburgerMenu, Logo, Navbar as NavbarWrapper } from '../../components';
+import LogoImage from '../../../assets/rc/rc-logo.png';
+import {
+  Box,
+  Container,
+  Drawer,
+  HamburgerMenu,
+  Logo,
+  Navbar as NavbarWrapper,
+} from '../../components';
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -28,9 +29,18 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
     <NavbarWrapper {...navbarStyle}>
       <Container>
         <Box {...row}>
-          <Logo href="#" logoSrc={LogoImage} title="Agency" logoStyle={logoStyle} />
+          <Logo
+            href="#"
+            logoSrc={LogoImage}
+            title="Agency"
+            logoStyle={logoStyle}
+          />
           <Box {...menuWrapper}>
-            <ScrollSpyMenu className="main_menu" menuItems={MENU_ITEMS} offset={-70} />
+            <ScrollSpyMenu
+              className="main_menu"
+              menuItems={MENU_ITEMS}
+              offset={-70}
+            />
             <Drawer
               width="420px"
               placement="right"
@@ -38,7 +48,12 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
               open={state.isOpen}
               toggleHandler={toggleHandler}
             >
-              <ScrollSpyMenu className="mobile_menu" menuItems={MENU_ITEMS} drawerClose offset={-100} />
+              <ScrollSpyMenu
+                className="mobile_menu"
+                menuItems={MENU_ITEMS}
+                drawerClose
+                offset={-100}
+              />
             </Drawer>
           </Box>
         </Box>
@@ -64,7 +79,12 @@ Navbar.defaultProps = {
   row: {
     flexBox: true,
     alignItems: 'center',
-    justifyContent: ['space-between', 'space-between', 'space-between', 'flex-start'],
+    justifyContent: [
+      'space-between',
+      'space-between',
+      'space-between',
+      'flex-start',
+    ],
     width: '100%',
   },
   logoStyle: {

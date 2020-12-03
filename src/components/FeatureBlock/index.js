@@ -1,6 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import FeatureBlockWrapper, { IconWrapper, ContentWrapper, ButtonWrapper } from './featureBlock.style';
+import FeatureBlockWrapper, {
+  IconWrapper,
+  ContentWrapper,
+  ButtonWrapper,
+} from './featureBlock.style';
 
 const FeatureBlock = ({
   className,
@@ -37,16 +41,26 @@ const FeatureBlock = ({
   );
 
   return (
-    <FeatureBlockWrapper className={addAllClasses.join(' ')} {...wrapperStyle} {...props}>
+    <FeatureBlockWrapper
+      className={addAllClasses.join(' ')}
+      {...wrapperStyle}
+      {...props}
+    >
       {Icon}
 
       {title || description || button ? (
         <>
-          <ContentWrapper className="content__wrapper" {...contentStyle}>
+          <ContentWrapper
+            className="content__wrapper"
+            {...contentStyle}
+          >
             {title}
             {description}
             {button && (
-              <ButtonWrapper className="button__wrapper" {...btnWrapperStyle}>
+              <ButtonWrapper
+                className="button__wrapper"
+                {...btnWrapperStyle}
+              >
                 {button}
               </ButtonWrapper>
             )}

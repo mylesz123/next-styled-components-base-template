@@ -19,5 +19,9 @@ export const DrawerContext = React.createContext({});
 
 export const DrawerProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  return <DrawerContext.Provider value={{ state, dispatch }}>{children}</DrawerContext.Provider>;
+  return (
+    <DrawerContext.Provider value={{ state, dispatch }}>
+      {children}
+    </DrawerContext.Provider>
+  );
 };

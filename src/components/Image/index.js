@@ -13,11 +13,14 @@ const ImageWrapper = styled('img')(
   themed('Image')
 );
 
-const Image = ({ src, alt, ...props }) => <ImageWrapper src={src} alt={alt} {...props} />;
+const Image = ({ src, alt, className, ...props }) => (
+  <ImageWrapper {...{ className, src, alt, ...props }} />
+);
 
 export default Image;
 
 Image.propTypes = {
+  className: PropTypes.string,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 };

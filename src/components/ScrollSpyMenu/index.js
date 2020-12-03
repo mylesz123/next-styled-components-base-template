@@ -5,7 +5,12 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { DrawerContext } from '../../contexts/DrawerContext';
 
-const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
+const ScrollSpyMenu = ({
+  className,
+  menuItems,
+  drawerClose,
+  ...props
+}) => {
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
@@ -31,7 +36,12 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   };
 
   return (
-    <Scrollspy items={scrollItems} className={addAllClasses.join(' ')} drawerClose={drawerClose} {...props}>
+    <Scrollspy
+      items={scrollItems}
+      className={addAllClasses.join(' ')}
+      drawerClose={drawerClose}
+      {...props}
+    >
       {menuItems.map((menu, index) => (
         <li key={`menu-item-${index}`}>
           {menu.staticLink ? (
@@ -39,7 +49,11 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           ) : (
             <>
               {drawerClose ? (
-                <AnchorLink href={menu.path} offset={menu.offset} onClick={toggleDrawer}>
+                <AnchorLink
+                  href={menu.path}
+                  offset={menu.offset}
+                  onClick={toggleDrawer}
+                >
                   {menu.label}
                 </AnchorLink>
               ) : (
